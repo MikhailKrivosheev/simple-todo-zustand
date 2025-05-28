@@ -1,7 +1,12 @@
 import Select from "react-select";
 import useTodoStore from "../store/useTodoStore";
 
-const OPTIONS = [
+type FilterOption = {
+  value: "active" | "completed" | "all";
+  label: string;
+};
+
+const OPTIONS: FilterOption[] = [
   { value: "active", label: "Завершенные" },
   { value: "completed", label: "Активные" },
   { value: "all", label: "Все" },
@@ -13,8 +18,8 @@ const Filter = () => {
 
   return (
     <Select
-      defaultValue={filter.value}
-      onChange={addFilter}
+      defaultValue={filter}
+      onChange={(newValue) => newValue && addFilter(newValue)}
       options={OPTIONS}
     />
   );

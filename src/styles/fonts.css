@@ -1,0 +1,117 @@
+/* TT Interphases Font Family */
+
+@font-face {
+  font-family: 'TT Interphases';
+  src: url('/fonts/TTInterphases/ttinterphases-thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Interphases';
+  src: url('/fonts/TTInterphases/ttinterphases-thinitalic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Interphases';
+  src: url('/fonts/TTInterphases/ttinterphases-light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Interphases';
+  src: url('/fonts/TTInterphases/ttinterphases-lightitalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Interphases';
+  src: url('/fonts/TTInterphases/ttinterphases-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Interphases';
+  src: url('/fonts/TTInterphases/ttinterphases-italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Interphases';
+  src: url('/fonts/TTInterphases/ttinterphases-medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Interphases';
+  src: url('/fonts/TTInterphases/ttinterphases-mediumitalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Interphases';
+  src: url('/fonts/TTInterphases/ttinterphases-bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Interphases';
+  src: url('/fonts/TTInterphases/ttinterphases-bolditalic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Interphases';
+  src: url('/fonts/TTInterphases/ttinterphases-extra.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Interphases';
+  src: url('/fonts/TTInterphases/ttinterphases-extraitalic.woff') format('woff');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Interphases';
+  src: url('/fonts/TTInterphases/ttinterphases-black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Interphases';
+  src: url('/fonts/TTInterphases/ttinterphases-blackitalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  --font-family-sans: "TT Interphases", "Verdana", "Geneva", sans-serif;
+}

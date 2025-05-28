@@ -1,0 +1,4 @@
+@import "tailwindcss";
+@import './fonts.css';
+@import './project/containers.css';
+@import './global/body.css';
