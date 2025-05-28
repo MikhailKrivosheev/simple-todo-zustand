@@ -2,24 +2,30 @@ import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
 interface TodoItem {
-  isChecked: boolean;
+  isCompleted: boolean;
   text: string;
+}
+
+interface Filter {
+  label: string;
+  value: "active" | "completed" | "all";
 }
 
 interface TodoList {
   todos: TodoItem[];
-  filter: "all" | "active" | "completed";
+  filter: Filter;
   addTodo: (todo: TodoItem) => void;
   editTodo: (todo: TodoItem, index: number) => void;
   removeTodo: (todo: TodoItem) => void;
   clearTodos: () => void;
+  addFilter: (filter: Filter) => void;
 }
 
 const useTodoStore = create<TodoList>()(
   persist(
     (set) => ({
       todos: [] as TodoItem[],
-      filter: "all",
+      filter: { label: "Все", value: "all" },
 
       addTodo: (todo: TodoItem) => {
         set((state) => ({ todos: [...state.todos, todo] }));
@@ -41,6 +47,10 @@ const useTodoStore = create<TodoList>()(
 
       clearTodos: () => {
         set({ todos: [] });
+      },
+
+      addFilter: (filter: Filter) => {
+        set({ filter: { label: filter.label, value: filter.value } });
       },
     }),
     { name: "todoStore" }

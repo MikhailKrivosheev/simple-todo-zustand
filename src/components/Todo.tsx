@@ -1,7 +1,7 @@
-import { useRef, useState } from "react";
+import cn from "classnames";
+import React, { useRef, useState } from "react";
 import useTodoStore from "../store/useTodoStore";
 import type { TodoItem, TodoProps } from "./types";
-import cn from "classnames";
 
 const Todo = ({ todo, removeTodo, index }: TodoProps) => {
   const [isEditing, setIsEditing] = useState(false);
@@ -9,16 +9,16 @@ const Todo = ({ todo, removeTodo, index }: TodoProps) => {
   const editTodo = useTodoStore((state) => state.editTodo);
 
   const todoClasses = cn("todo__item", {
-    "todo__item--checked": todo.isChecked,
+    "todo__item--checked": todo.isCompleted,
   });
 
   const onEditTodoClick = (todo: TodoItem, index: number) => {
-    editTodo({ text: todo.text, isChecked: todo.isChecked }, index);
+    editTodo({ text: todo.text, isCompleted: todo.isCompleted }, index);
     setIsEditing(false);
   };
 
   const onCheckTodoClick = (todo: TodoItem, index: number) => {
-    editTodo({ text: todo.text, isChecked: !todo.isChecked }, index);
+    editTodo({ text: todo.text, isCompleted: !todo.isCompleted }, index);
   };
 
   return (
@@ -38,7 +38,7 @@ const Todo = ({ todo, removeTodo, index }: TodoProps) => {
                 onEditTodoClick(
                   {
                     text: inputRef.current?.value || "",
-                    isChecked: todo.isChecked,
+                    isCompleted: todo.isCompleted,
                   },
                   index
                 )
@@ -52,7 +52,7 @@ const Todo = ({ todo, removeTodo, index }: TodoProps) => {
             <span>{todo.text}</span>
             <input
               type="checkbox"
-              checked={todo.isChecked}
+              checked={todo.isCompleted}
               onChange={() => onCheckTodoClick(todo, index)}
             />
           </>
@@ -78,4 +78,4 @@ const Todo = ({ todo, removeTodo, index }: TodoProps) => {
   );
 };
 
-export default Todo;
+export default React.memo(Todo);

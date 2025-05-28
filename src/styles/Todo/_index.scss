@@ -23,6 +23,9 @@ input {
 }
 
 .todo__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   width: 1000px;
   padding: 20px;
   border: 1px solid black;

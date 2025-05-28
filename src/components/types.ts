@@ -1,5 +1,5 @@
 export interface TodoItem {
-  isChecked: boolean;
+  isCompleted: boolean;
   text: string;
 }
 

@@ -14,6 +14,7 @@
     "immer": "^10.1.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-select": "^5.10.1",
     "sass-embedded": "^1.89.0",
     "zustand": "^5.0.5"
   },
