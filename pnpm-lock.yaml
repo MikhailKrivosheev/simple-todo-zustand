@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@tailwindcss/vite':
-        specifier: ^4.1.7
-        version: 4.1.8(vite@6.3.5(jiti@2.4.2)(lightningcss@1.30.1)(sass-embedded@1.89.0))
       classnames:
         specifier: ^2.5.1
         version: 2.5.1
@@ -45,6 +42,9 @@ importers:
       '@eslint/js':
         specifier: ^9.25.0
         version: 9.27.0
+      '@tailwindcss/vite':
+        specifier: ^4.1.8
+        version: 4.1.8(vite@6.3.5(jiti@2.4.2)(lightningcss@1.30.1)(sass-embedded@1.89.0))
       '@types/react':
         specifier: ^19.1.2
         version: 19.1.6
