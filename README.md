@@ -1,9 +1,11 @@
 ## Todo list
 
-A simple Todo application. Package manager - `pnpm`, Bundler - `Vite`.<br/>
-React + TypeScript.<br/>
-State manager - `Zustand` + `Immer` middleware.<br/>
-Styling - `Tailwind CSS`.<br/>
+A simple Todo application.<br/>
+`React` + `TypeScript`<br/>
+Package manager - `pnpm`<br/>
+Bundler - `Vite`<br/>
+State manager - `Zustand` + `Immer` middleware<br/>
+Styling - `Tailwind CSS`<br/>
 
 ## Install
 
